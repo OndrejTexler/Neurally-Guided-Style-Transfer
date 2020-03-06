@@ -1,9 +1,9 @@
 #include <iostream>				//cout
 #include "opencv2/opencv.hpp"	//cv::Mat
-#include "StyLitBackEnd.h"		//Original, Fluids, Photo
-#include "StyLitCoreCommands.h"	//namespace Usecase
 #include "cxxopts.hpp"			//cxxopts commandline parser
 #include "OpenCVUtils.h"		//Imread
+#include "CreateGuideUtils.h"
+#include "EbsynthWrapper.h"
 
 using namespace std;
 
@@ -455,7 +455,7 @@ int main(int argc, char* argv[])
 	}
 
 	cv::Mat stylitOutput;
-	if (usecase == Usecase::Photo)
+	if (usecase == "Photo")
 	{
 		stylitOutput = PhotoUsecaseParseAndRun(parseResult, errorMessage);
 	}
