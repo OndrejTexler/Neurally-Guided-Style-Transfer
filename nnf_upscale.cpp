@@ -1,4 +1,7 @@
 #include "cxxopts.hpp"			//cxxopts commandline parser
+#include "opencv2/opencv.hpp"
+
+using namespace cv;
 
 
 bool isOutOfImage(const Mat& image, const int row, const int col)
