@@ -14,7 +14,6 @@ cv::Mat CallStyLit(cv::Mat sourceStyleMat,
 	               std::vector<cv::Mat> sources, 
 	               std::vector<cv::Mat> targets, 
 				   const float styLitMaxMP,
-	               const float styleWeight, 
-	               const std::string& exposeGuidePath, 
+	               const float styleWeight,
 	               const std::string& stylitBackend, 
 				   std::string& errorMessage);

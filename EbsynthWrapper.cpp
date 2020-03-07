@@ -21,7 +21,7 @@ std::pair<int, int> pyramidLevelSize(const std::pair<int, int>& sizeBase, const 
  *  All input images are passed as deep-copy, because they are modified (subsampled) if they are too big
 */
 cv::Mat CallStyLit(cv::Mat sourceStyleMat, vector<cv::Mat> sources, vector<cv::Mat> targets, const float styLitMaxMP, const float styleWeight, 
-				   const std::string& exposeGuidePath, const std::string& stylitBackend, std::string& errorMessage)
+				   const std::string& stylitBackend, std::string& errorMessage)
 {
 	errorMessage.clear();
 	cv::Mat originalStyle;
@@ -31,7 +31,7 @@ cv::Mat CallStyLit(cv::Mat sourceStyleMat, vector<cv::Mat> sources, vector<cv::M
 
 	int subsampleCoefficient = SubsampleIfNecessary(sourceStyleMat, sources, targets, styLitMaxMP);
 	
-	cout << "SubsampleCoefficient: " << subsampleCoefficient << endl;
+	cout << "SubsampleCoefficient: " << subsampleCoefficient << " (" << sources[0].cols << "x" << sources[0].rows << ")" << endl;
 	
 	struct Guide
 	{
