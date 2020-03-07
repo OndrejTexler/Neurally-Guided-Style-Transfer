@@ -31,7 +31,8 @@ cv::Mat CallStyLit(cv::Mat sourceStyleMat, vector<cv::Mat> sources, vector<cv::M
 
 	int subsampleCoefficient = SubsampleIfNecessary(sourceStyleMat, sources, targets, styLitMaxMP);
 	
-	cout << "SubsampleCoefficient: " << subsampleCoefficient << " (" << sources[0].cols << "x" << sources[0].rows << ")" << endl;
+
+	cout << "Patch based synthesis runs on resolution " << sources[0].cols << "x" << sources[0].rows << endl;
 	
 	struct Guide
 	{
@@ -278,6 +279,11 @@ cv::Mat CallStyLit(cv::Mat sourceStyleMat, vector<cv::Mat> sources, vector<cv::M
 	if (subsampleCoefficient > 1)
 	{
 		output = UpsampleIfNecessaty(finalNNF, targetHeight, targetWidth, subsampleCoefficient, patchSize, originalStyle, originalTarget_rows, originalTarget_cols);
+		cout << "NNF was upscaled " << subsampleCoefficient << " times" << endl;
+	}
+	else 
+	{
+		cout << "NNF does not need to be upscaled" << endl;
 	}
 	//float upsampleTime = upsampleTimer.elapsed_milliseconds() / 1000.0f;
 
