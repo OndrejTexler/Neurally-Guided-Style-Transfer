@@ -22,7 +22,25 @@ and [D. Sýkora](https://dcgi.fel.cvut.cz/home/sykorad/)_ </br>
 [[`Slides`](https://dcgi.fel.cvut.cz/home/sykorad/Texler19-NPAR.pptx)]
 <!-- In Proceedings of the 8th ACM/EG Expressive Symposium, pp. 43-50 (Expressive 2019, Genoa, Italy, May 2019) -->
 
+## Installation
+### On Windows 
+* Run `build-win.bat`, it should output `main.exe`.
+* It depends on OpenCV and it expects `opencv_world420.dll` in your PATH. The DLL can be downloaded at https://opencv.org/opencv-4-2-0/, (or directly https://sourceforge.net/projects/opencvlibrary/files/4.2.0/opencv-4.2.0-vc14_vc15.exe/download)
 
+### On Linux 
+* Run `build-linux.sh`
+
+## Parameters
+* `--style <string>`, mandatory, path to the style image
+* `--neural_result <string>`, mandatory, path to the neural result
+* `--out_path <string>`, optional, output path, if not specified `--neural_result`+"_enhanced.jpg" is used instead 
+* `--target <string>`, optional, has to be specified if you want to use `--guide_by_target` or `--recolor_by_target`
+* `--guide_by_target <bool>`, optional, might help to restore some content of the target image, but also might make the result worse stylization-wise (target has to be perfectly aligned with neural_result)
+* `--recolor_by_target <bool>`, optional, recolor the final result to have similar colors as the target image
+* `--patch_based_source_blur <int>`, optional, specify how much the result is abstract
+* `--patch_based_style_weight <float>`, optional, specify whether to follow style or content during the patch based synthesis
+* `--patch_based_max_mp <float>`, optional, defines the maximal resolution (in megapixels) on which the patch based synthesis runs 
+* `--patch_based_backend <string>`, optional, values are "CPU", "GPU" or "AUTO"
 
 ## <a name="CitingNeurallyGuided"></a>Citing Neurally-Guided-Style-Transfer
 If you find Neurally-Guided-Style-Transfer usefull for your research or work, please use the following BibTeX entry.
