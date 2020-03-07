@@ -29,7 +29,7 @@ and [D. Sýkora](https://dcgi.fel.cvut.cz/home/sykorad/)_ </br>
 
 ### On Linux 
 * Download and build OpenCV 4.2.0 (https://opencv.org/opencv-4-2-0/)
-* Copy `libopencv_world.so` and `libopencv_world.so.4.2` to the `opencv-4.2.0/lib`
+* Copy `libopencv_world.so`, `libopencv_world.so.4.2`, and `libopencv_world.so.4.2.0` to the `opencv-4.2.0/lib`
 * Do not forget to update your `LD_LIBRARY_PATH` to point to the `opencv-4.2.0/lib`
 * Run `build-linux.sh`, it should output `styletransfer`
 
