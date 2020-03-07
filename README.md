@@ -22,13 +22,15 @@ and [D. Sýkora](https://dcgi.fel.cvut.cz/home/sykorad/)_ </br>
 [[`Slides`](https://dcgi.fel.cvut.cz/home/sykorad/Texler19-NPAR.pptx)]
 <!-- In Proceedings of the 8th ACM/EG Expressive Symposium, pp. 43-50 (Expressive 2019, Genoa, Italy, May 2019) -->
 
-## Installation
+## Build
 ### On Windows 
 * Run `build-win.bat`, it should output `main.exe`.
-* It depends on OpenCV and it expects `opencv_world420.dll` in your PATH. The DLL can be downloaded at https://opencv.org/opencv-4-2-0/, (or directly https://sourceforge.net/projects/opencvlibrary/files/4.2.0/opencv-4.2.0-vc14_vc15.exe/download)
+* It depends on OpenCV and it expects `opencv_world420.dll` in your PATH. Pre-build DLL can be downloaded at https://opencv.org/opencv-4-2-0/, (or directly https://sourceforge.net/projects/opencvlibrary/files/4.2.0/opencv-4.2.0-vc14_vc15.exe/download)
 
 ### On Linux 
+* Download and build OpenCV 4.2.0 (https://opencv.org/opencv-4-2-0/)
 * Run `build-linux.sh`
+* Do not forget to update your `LD_LIBRARY_PATH`
 
 ## Parameters
 * `--style <string>`, mandatory, path to the style image
@@ -41,6 +43,10 @@ and [D. Sýkora](https://dcgi.fel.cvut.cz/home/sykorad/)_ </br>
 * `--patch_based_style_weight <float>`, optional, specify whether to follow style or content during the patch based synthesis
 * `--patch_based_max_mp <float>`, optional, defines the maximal resolution (in megapixels) on which the patch based synthesis runs 
 * `--patch_based_backend <string>`, optional, values are "CPU", "GPU" or "AUTO"
+
+## Examples
+* Once compiled successfully, check and run `examples/wolf/run.bat` or `examples/wolf/run.sh`
+* The result image should appear next to the scripts
 
 ## <a name="CitingNeurallyGuided"></a>Citing Neurally-Guided-Style-Transfer
 If you find Neurally-Guided-Style-Transfer usefull for your research or work, please use the following BibTeX entry.
