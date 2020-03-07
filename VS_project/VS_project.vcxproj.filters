@@ -27,6 +27,15 @@
     <ClCompile Include="..\CreateGuideUtils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\patch_based_synthesis\src\ebsynth.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\patch_based_synthesis\src\ebsynth_cpu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\patch_based_synthesis\src\ebsynth_nocuda.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CreateGuideUtils.h">
