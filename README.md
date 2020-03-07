@@ -24,13 +24,14 @@ and [D. Sýkora](https://dcgi.fel.cvut.cz/home/sykorad/)_ </br>
 
 ## Build
 ### On Windows 
-* Run `build-win.bat`, it should output `main.exe`.
+* Run `build-win.bat`, it should output `styletransfer.exe`
 * It depends on OpenCV and it expects `opencv_world420.dll` in your PATH. Pre-build DLL can be downloaded at https://opencv.org/opencv-4-2-0/, (or directly https://sourceforge.net/projects/opencvlibrary/files/4.2.0/opencv-4.2.0-vc14_vc15.exe/download)
 
 ### On Linux 
 * Download and build OpenCV 4.2.0 (https://opencv.org/opencv-4-2-0/)
-* Run `build-linux.sh`
-* Do not forget to update your `LD_LIBRARY_PATH`
+* Copy `libopencv_world.so` and `libopencv_world.so.4.2` to the `opencv-4.2.0/lib`
+* Do not forget to update your `LD_LIBRARY_PATH` to point to the `opencv-4.2.0/lib`
+* Run `build-linux.sh`, it should output `styletransfer`
 
 ## Parameters
 * `--style <string>`, mandatory, path to the style image
