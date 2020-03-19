@@ -43,7 +43,7 @@ and [D. Sýkora](https://dcgi.fel.cvut.cz/home/sykorad/)_ </br>
 * `--patch_based_source_blur <int>`, optional, specify how much the result is abstract
 * `--patch_based_style_weight <float>`, optional, specify whether to follow style or content during the patch based synthesis
 * `--patch_based_max_mp <float>`, optional, defines the maximal resolution (in megapixels) on which the patch based synthesis runs 
-* `--patch_based_backend <string>`, optional, values are "CPU", "GPU" or "AUTO"
+* `--patch_based_backend <string>`, optional, values are "CPU", "CUDA" or "AUTO"
 
 ## Examples
 * Once compiled successfully, check and run `examples/wolf/run.bat` or `examples/wolf/run.sh`
