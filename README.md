@@ -22,6 +22,33 @@ and [D. Sýkora](https://dcgi.fel.cvut.cz/home/sykorad/)_ </br>
 [[`Slides`](https://dcgi.fel.cvut.cz/home/sykorad/Texler19-NPAR.pptx)]
 <!-- In Proceedings of the 8th ACM/EG Expressive Symposium, pp. 43-50 (Expressive 2019, Genoa, Italy, May 2019) -->
 
+Neural based style transfer methods are capable of delivering amazing stylized imagery; however, the results are usually low-resolution,
+blurred, contrast does not match the original style, and the image lacks many artistically essential details, e.g., brush-strokes, 
+properties of the used artistic medium, or canvas structure.
+
+This tool is designed to overcome the aforementioned drawbacks of neural based style transfer and allow for creating 
+high-quality and extremely high-resolution images. The use-case is the following. 
+* Let's assume we have a style exemplar and target photograph in high-resolution.
+* First, we run these two images through our favorite neural-based style transfer method. The result we get is 
+of a low resolution and does not represent the used style exemplar well.
+* Second, we use this tool to restore the quality of the neural result and upscale it to the resolution of the style exemplar.
+
+<p align='center'>
+  <img src='doc/res_blonde.jpg'/>
+  <b>Portrait on a wall.</b> Target and Style are of 4000x3000 px. Neural results (Gatys et al. and DeepDream, top left triangles) were 
+  generated in approximately 580x435 px. Neural results were then reconstructed and upscaled by this tool (Gatys et al.+ours and 
+  DeepDream+ours, bottom right triangles) to the original resolution of 4000x3000.
+</p>
+
+<p align='center'>
+  <img src='doc/res_346M.jpg'/>
+  <b>Extremely large 346Mpix image.</b> Target and Style are of 26412x13127 px. The neural result (not shown here) was approximately 700x348 px. This result
+  was then reconstructed and nearly 40 times upscaled by this tool to the original resolution. The right part of the figure shows 
+  zoom-in patches. See all the individual brush strokes and its sharp boundaries. Also, notice how well the structure of the original canvas and
+  little cracks of the painting are preserved.
+</p>
+
+
 ## Build
 ### On Windows 
 * Run `build-win.bat`, it should output `styletransfer.exe`
