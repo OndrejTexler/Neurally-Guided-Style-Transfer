@@ -29,8 +29,8 @@ properties of the used artistic medium, or canvas structure.
 This tool is designed to overcome the aforementioned drawbacks of neural based style transfer and allow for creating 
 high-quality and extremely high-resolution images. The use-case is the following. 
 * Let's assume we have a style exemplar and target photograph in high-resolution.
-* First, we run these two images through our favorite neural-based style transfer method. The result we get is 
-of a low resolution and does not represent the used style exemplar well.
+* First, we run these two images through our favorite neural-based style transfer method (see some tips in the [section below](#ExistingNeuralStyleTransferImplementations)). 
+The result we get is of a low resolution and does not represent the used style exemplar well.
 * Second, we use this tool to restore the quality of the neural result and upscale it to the resolution of the style exemplar.
 
 <p align='center'>
@@ -51,7 +51,7 @@ of a low resolution and does not represent the used style exemplar well.
 
 ## Build
 ### On Windows 
-* It depends on OpenCV and it expects `opencv_world420.dll` in your PATH. Pre-build DLL can be downloaded at https://opencv.org/opencv-4-2-0/, (or directly [opencv-4.2.0-vc14_vc15.exe](https://sourceforge.net/projects/opencvlibrary/files/4.2.0/opencv-4.2.0-vc14_vc15.exe/download))
+* It depends on OpenCV and it expects `opencv_world420.dll` in your PATH. Pre-build DLL can be downloaded at https://opencv.org/opencv-4-2-0/, (or directly at [opencv-4.2.0-vc14_vc15.exe](https://sourceforge.net/projects/opencvlibrary/files/4.2.0/opencv-4.2.0-vc14_vc15.exe/download))
 * The build script assumes VisualStudio to be installed
 * Run `build-win.bat`, it should output `styletransfer.exe`
 
@@ -77,8 +77,30 @@ of a low resolution and does not represent the used style exemplar well.
 * Once compiled successfully, check and run `examples/wolf/run.bat` or `examples/wolf/run.sh`
 * The result image should appear next to the scripts
 
+## <a name="ExistingNeuralStyleTransferImplementations"></a>Existing Neural Style Transfer Implementations
+There exist many great Neural Based Style Transfer papers and its implementations, the following are just a few of them:
+* [[Gatys et al. 2015]](https://arxiv.org/pdf/1508.06576.pdf) A Neural Algorithm of Artistic Style
+  * Torch implementation: https://github.com/jcjohnson/neural-style
+  * PyTorch implementaation: https://github.com/ProGamerGov/neural-style-pt
+  * Online web app by the original authors: https://deepart.io/
+* [DeepDreamGenerator](https://deepdreamgenerator.com/#tools)
+  * There is a web app called Deep Style
+* [[Gu et al. 2018]](https://arxiv.org/pdf/1805.04103.pdf) Arbitrary Style Transfer with Deep Feature Reshuffle
+  * C++ Caffe implementation: https://github.com/msracver/Style-Feature-Reshuffle
+* [[Liao et al. 2017]](https://arxiv.org/pdf/1705.01088.pdf) Visual Attribute Transfer through Deep Image Analogy
+  * C++ Caffe implementation: https://github.com/msracver/Deep-Image-Analogy
+* [[Li. et al. 2017]](https://arxiv.org/pdf/1705.08086.pdf) Universal Style Transfer via Feature Transforms
+  * Torch implementation: https://github.com/Yijunmaverick/UniversalStyleTransfer
+  * PyTorch implementation: https://github.com/sunshineatnoon/PytorchWCT
+  * TensorFlow implementation: https://github.com/eridgd/WCT-TF
+
+## Underlying Patch-Based Synthesis Framework
+As the underlying patch-based synthesis, this repository uses framework [EBSynth](https://github.com/jamriska/ebsynth) 
+created and maintained by our colleague [Ondrej Jamriska](https://dcgi.fel.cvut.cz/people/jamriond).
+
+
 ## <a name="CitingNeurallyGuided"></a>Citing Neurally-Guided-Style-Transfer
-If you find Neurally-Guided-Style-Transfer usefull for your research or work, please use the following BibTeX entry.
+If you find Neurally-Guided-Style-Transfer useful for your research or work, please use the following BibTeX entry.
 
 ```
 @ARTICLE{Texler20-CAG,
