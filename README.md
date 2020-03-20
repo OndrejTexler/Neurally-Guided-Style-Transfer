@@ -51,8 +51,9 @@ of a low resolution and does not represent the used style exemplar well.
 
 ## Build
 ### On Windows 
+* It depends on OpenCV and it expects `opencv_world420.dll` in your PATH. Pre-build DLL can be downloaded at https://opencv.org/opencv-4-2-0/, (or directly [opencv-4.2.0-vc14_vc15.exe](https://sourceforge.net/projects/opencvlibrary/files/4.2.0/opencv-4.2.0-vc14_vc15.exe/download))
+* The build script assumes VisualStudio to be installed
 * Run `build-win.bat`, it should output `styletransfer.exe`
-* It depends on OpenCV and it expects `opencv_world420.dll` in your PATH. Pre-build DLL can be downloaded at https://opencv.org/opencv-4-2-0/, (or directly https://sourceforge.net/projects/opencvlibrary/files/4.2.0/opencv-4.2.0-vc14_vc15.exe/download)
 
 ### On Linux 
 * Download and build OpenCV 4.2.0 (https://opencv.org/opencv-4-2-0/)
