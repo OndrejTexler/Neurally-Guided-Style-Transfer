@@ -66,18 +66,18 @@ void Recolor(Mat & lumImage, Mat & colorImage)
 }
 
 
-// TODO: Check styLitMaxMP against the available GPU memory
-int SubsampleIfNecessary(cv::Mat& sourceStyleMat, vector<cv::Mat>& sources, vector<cv::Mat>& targets, const float styLitMaxMP)
+// TODO: Check patchBasedMaxMP against the available GPU memory
+int SubsampleIfNecessary(cv::Mat& sourceStyleMat, vector<cv::Mat>& sources, vector<cv::Mat>& targets, const float patchBasedMaxMP)
 {	
 	const float pixelsMP = std::max(((float)sources[0].rows / 1000.0f)*((float)sources[0].cols / 1000.0f), 
 		                            ((float)targets[0].rows / 1000.0f)*((float)targets[0].cols / 1000.0f));
 
-	if (styLitMaxMP == 0.0f) 
+	if (patchBasedMaxMP == 0.0f) 
 	{
 		return 1;
 	}
 
-	int coefficient = (int)ceilf(std::sqrt(ceil(pixelsMP / styLitMaxMP)));
+	int coefficient = (int)ceilf(std::sqrt(ceil(pixelsMP / patchBasedMaxMP)));
 	
 	if (coefficient <= 1) 
 	{

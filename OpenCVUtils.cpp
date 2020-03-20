@@ -181,7 +181,6 @@ cv::Mat Imread(const std::string& path, const bool swapRandB)
 	return image;
 }
 
-
 void Imwrite(const std::string& path, const Mat& image, const bool swapRandB)
 {
 	if(swapRandB)
@@ -204,6 +203,7 @@ bool isOutOfImage(const Mat& image, const int row, const int col)
 		col >= image.cols;
 }
 
+/*
 void imshowInWindow(const std::string& windowTitle, const cv::Mat& image)
 {
 	cv::namedWindow(windowTitle, WINDOW_NORMAL);
@@ -228,3 +228,4 @@ void imshowInWindow(const std::string& windowTitle, const cv::Mat& image, int wi
 	imshow(windowTitle, image);
 	cv::waitKey(1);
 }
+*/

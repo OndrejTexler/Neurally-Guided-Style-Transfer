@@ -1,11 +1,9 @@
 #include "EbsynthWrapper.h"
-#include "ebsynth.h"
+#include "ebsynth.h"			// ebsynthRun
 #include <utility>				// pair
 #include <algorithm>			// std::min
-#include "CreateGuideUtils.h"	// UpsampleIfNecessaty
-//#include "DebugUtils.h"			// DEBUG_Save_All
+#include "CreateGuideUtils.h"	// UpsampleIfNecessaty, SubsampleIfNecessary
 #include "opencv2/opencv.hpp"   // cv::Mat
-
 #include "TimeMeasure.h"		// TimeMeasure
 
 using namespace std;
@@ -20,8 +18,8 @@ std::pair<int, int> pyramidLevelSize(const std::pair<int, int>& sizeBase, const 
 /*
  *  All input images are passed as deep-copy, because they are modified (subsampled) if they are too big
 */
-cv::Mat CallStyLit(cv::Mat sourceStyleMat, vector<cv::Mat> sources, vector<cv::Mat> targets, const float styLitMaxMP, const float styleWeight, 
-				   const std::string& stylitBackend, std::string& errorMessage)
+cv::Mat CallEbsynth(cv::Mat sourceStyleMat, vector<cv::Mat> sources, vector<cv::Mat> targets, const float patchBasedMaxMP, const float styleWeight, 
+				   const std::string& patchBasedBackend, std::string& errorMessage)
 {
 	errorMessage.clear();
 	cv::Mat originalStyle;
@@ -29,7 +27,7 @@ cv::Mat CallStyLit(cv::Mat sourceStyleMat, vector<cv::Mat> sources, vector<cv::M
 	const int originalTarget_rows = targets[0].rows;
 	const int originalTarget_cols = targets[0].cols;
 
-	int subsampleCoefficient = SubsampleIfNecessary(sourceStyleMat, sources, targets, styLitMaxMP);
+	int subsampleCoefficient = SubsampleIfNecessary(sourceStyleMat, sources, targets, patchBasedMaxMP);
 	
 
 	cout << "Patch based synthesis runs on resolution " << sources[0].cols << "x" << sources[0].rows << endl;
@@ -221,15 +219,15 @@ cv::Mat CallStyLit(cv::Mat sourceStyleMat, vector<cv::Mat> sources, vector<cv::M
 
 	int EBSYNTH_BACKEND;
 
-	if (stylitBackend == "CUDA") 
+	if (patchBasedBackend == "CUDA") 
 	{
 		EBSYNTH_BACKEND = EBSYNTH_BACKEND_CUDA;
 	}
-	else if (stylitBackend == "CPU")
+	else if (patchBasedBackend == "CPU")
 	{
 		EBSYNTH_BACKEND = EBSYNTH_BACKEND_CPU;
 	}
-	else if (stylitBackend == "AUTO") 
+	else if (patchBasedBackend == "AUTO") 
 	{
 		EBSYNTH_BACKEND = EBSYNTH_BACKEND_AUTO;
 	}
@@ -290,7 +288,7 @@ cv::Mat CallStyLit(cv::Mat sourceStyleMat, vector<cv::Mat> sources, vector<cv::M
 	//system(string(string("ECHO") +  
 	//	+ " ebsynth=" + std::to_string(ebSynthTime) 
 	//	+ " upsample=" + std::to_string(upsampleTime) 
-	//	+ " styLitMaxMP=" + std::to_string(styLitMaxMP) 
+	//	+ " patchBasedMaxMP=" + std::to_string(patchBasedMaxMP) 
 	//	+ " subsampleCoeff=" + std::to_string(subsampleCoefficient)
 	//	+ " pyrLvls=" + std::to_string(numPyramidLevels)
 	//	+ " & pause").c_str());

@@ -23,8 +23,10 @@ void Imwrite(const std::string& path, const cv::Mat& image, const bool swapRandB
 
 bool isOutOfImage(const cv::Mat& image, const int row, const int col);
 
+/*
 void imshowInWindow(const std::string& windowTitle, const cv::Mat& image);
 
 void imshowInWindow(const std::string& windowTitle, const cv::Mat& image, int windowWidth, int windowHeight);
 
 void imshowInWindow(const std::string& windowTitle, const cv::Mat& image, int windowWidth, int windowHeight, int moveX, int moveY);
+*/
