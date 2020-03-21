@@ -80,19 +80,16 @@ The result we get is of a low resolution and does not represent the used style e
 ## <a name="ExistingNeuralStyleTransferImplementations"></a>Existing Neural Style Transfer Implementations
 There exist many great Neural Based Style Transfer papers and its implementations, the following are just a few of them:
 * [[Gatys et al. 2015]](https://arxiv.org/pdf/1508.06576.pdf) A Neural Algorithm of Artistic Style
-  * Torch implementation: https://github.com/jcjohnson/neural-style
-  * PyTorch implementaation: https://github.com/ProGamerGov/neural-style-pt
-  * Online web app by the original authors: https://deepart.io/
+  * [Torch](https://github.com/jcjohnson/neural-style) and [PyTorch](https://github.com/ProGamerGov/neural-style-pt) implementation
+  * [DeepArt.io](https://deepart.io/) - online web app by the original authors
 * [DeepDreamGenerator](https://deepdreamgenerator.com/#tools)
   * There is a web app called Deep Style
 * [[Gu et al. 2018]](https://arxiv.org/pdf/1805.04103.pdf) Arbitrary Style Transfer with Deep Feature Reshuffle
-  * C++ Caffe implementation: https://github.com/msracver/Style-Feature-Reshuffle
+  * [C++ Caffe](https://github.com/msracver/Style-Feature-Reshuffle) implementation
 * [[Liao et al. 2017]](https://arxiv.org/pdf/1705.01088.pdf) Visual Attribute Transfer through Deep Image Analogy
-  * C++ Caffe implementation: https://github.com/msracver/Deep-Image-Analogy
+  * [C++ Caffe](https://github.com/msracver/Deep-Image-Analogy) implementation
 * [[Li. et al. 2017]](https://arxiv.org/pdf/1705.08086.pdf) Universal Style Transfer via Feature Transforms
-  * Torch implementation: https://github.com/Yijunmaverick/UniversalStyleTransfer
-  * PyTorch implementation: https://github.com/sunshineatnoon/PytorchWCT
-  * TensorFlow implementation: https://github.com/eridgd/WCT-TF
+  * [Torch](https://github.com/Yijunmaverick/UniversalStyleTransfer), [PyTorch](https://github.com/sunshineatnoon/PytorchWCT), and [TensorFlow](https://github.com/eridgd/WCT-TF) implementation
 
 ## Underlying Patch-Based Synthesis Framework
 As the underlying patch-based synthesis, this repository uses framework [EBSynth](https://github.com/jamriska/ebsynth) 
