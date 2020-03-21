@@ -2,7 +2,7 @@
 #include "ebsynth.h"			// ebsynthRun
 #include <utility>				// pair
 #include <algorithm>			// std::min
-#include "CreateGuideUtils.h"	// UpsampleIfNecessaty, SubsampleIfNecessary
+#include "SynthesisUtils.h"	// UpsampleIfNecessaty, SubsampleIfNecessary
 #include "opencv2/opencv.hpp"   // cv::Mat
 #include "TimeMeasure.h"		// TimeMeasure
 

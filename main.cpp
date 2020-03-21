@@ -2,7 +2,7 @@
 #include "opencv2/opencv.hpp"	// cv::Mat
 #include "cxxopts.hpp"			// cxxopts commandline parser
 #include "OpenCVUtils.h"		// Imread
-#include "CreateGuideUtils.h"
+#include "SynthesisUtils.h"
 #include "EbsynthWrapper.h"
 
 using namespace std;

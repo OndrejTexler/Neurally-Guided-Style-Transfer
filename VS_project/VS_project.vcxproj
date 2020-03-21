@@ -85,7 +85,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\CreateGuideUtils.cpp" />
+    <ClCompile Include="..\SynthesisUtils.cpp" />
     <ClCompile Include="..\EbsynthWrapper.cpp" />
     <ClCompile Include="..\main.cpp" />
     <ClCompile Include="..\OpenCVUtils.cpp" />
@@ -94,7 +94,7 @@
     <ClCompile Include="..\patch_based_synthesis\src\ebsynth_nocuda.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\CreateGuideUtils.h" />
+    <ClInclude Include="..\SynthesisUtils.h" />
     <ClInclude Include="..\cxxopts.hpp" />
     <ClInclude Include="..\EbsynthWrapper.h" />
     <ClInclude Include="..\OpenCVUtils.h" />

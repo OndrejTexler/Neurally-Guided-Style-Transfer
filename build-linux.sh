@@ -1,5 +1,5 @@
 #!/bin/sh
-g++ CreateGuideUtils.cpp \
+g++ SynthesisUtils.cpp \
 	EbsynthWrapper.cpp \
 	main.cpp \
 	OpenCVUtils.cpp \
