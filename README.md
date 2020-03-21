@@ -95,6 +95,10 @@ There exist many great Neural Based Style Transfer papers and its implementation
 As the underlying patch-based synthesis, this repository uses framework [EBSynth](https://github.com/jamriska/ebsynth) 
 created and maintained by our colleague [Ondrej Jamriska](https://dcgi.fel.cvut.cz/people/jamriond).
 
+## License
+The code is released into the public domain. You can do anything you want with it.
+
+However, you should be aware that the underlying patch-based synthesis framework EBSynth implements the PatchMatch algorithm, which is patented by Adobe (U.S. Patent 8,861,869). This repository does not necessarily depend on this particular EBSynth framework, and other patch-based synthesis solutions can be used instead. Also, EBSynth does not necessarily depend on PatchMatch, and other correspondence finding algorithms can be used instead.
 
 ## <a name="CitingNeurallyGuided"></a>Citing Neurally-Guided-Style-Transfer
 If you find Neurally-Guided-Style-Transfer useful for your research or work, please use the following BibTeX entry.
