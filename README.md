@@ -50,12 +50,12 @@ The result we get is of a low resolution and does not represent the used style e
 
 
 ## Build
-### On Windows 
+#### On Windows 
 * It depends on OpenCV and it expects `opencv_world420.dll` in your PATH. Pre-build DLL can be downloaded at https://opencv.org/opencv-4-2-0/, (or directly at [opencv-4.2.0-vc14_vc15.exe](https://sourceforge.net/projects/opencvlibrary/files/4.2.0/opencv-4.2.0-vc14_vc15.exe/download))
 * The build script assumes VisualStudio to be installed
 * Run `build-win.bat`, it should output `styletransfer.exe`
 
-### On Linux 
+#### On Linux 
 * Download and build OpenCV 4.2.0 (https://opencv.org/opencv-4-2-0/)
 * Copy `libopencv_world.so`, `libopencv_world.so.4.2`, and `libopencv_world.so.4.2.0` to the `opencv-4.2.0/lib`
 * Do not forget to update your `LD_LIBRARY_PATH` to point to the `opencv-4.2.0/lib`
@@ -91,8 +91,9 @@ There exist many great Neural Based Style Transfer papers and its implementation
 * [[Li. et al. 2017]](https://arxiv.org/pdf/1705.08086.pdf) Universal Style Transfer via Feature Transforms
   * [Torch](https://github.com/Yijunmaverick/UniversalStyleTransfer), [PyTorch](https://github.com/sunshineatnoon/PytorchWCT), and [TensorFlow](https://github.com/eridgd/WCT-TF) implementation
 
-## Underlying Patch-Based Synthesis Framework
-As the underlying patch-based synthesis, this repository uses framework [EBSynth](https://github.com/jamriska/ebsynth) 
+## Credits
+* This project was funded by [Adobe Research](https://research.adobe.com/) and [Czech Technical University in Prague](https://www.cvut.cz/en) 
+* As the underlying patch-based synthesis, this repository uses framework [EBSynth](https://github.com/jamriska/ebsynth) 
 created and maintained by our colleague [Ondrej Jamriska](https://dcgi.fel.cvut.cz/people/jamriond).
 
 ## License
