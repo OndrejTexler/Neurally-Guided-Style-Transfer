@@ -92,7 +92,7 @@ There exist many great Neural Based Style Transfer papers and its implementation
   * [Torch](https://github.com/Yijunmaverick/UniversalStyleTransfer), [PyTorch](https://github.com/sunshineatnoon/PytorchWCT), and [TensorFlow](https://github.com/eridgd/WCT-TF) implementation
 
 ## Credits
-* This project was funded by [Adobe Research](https://research.adobe.com/) and [Czech Technical University in Prague](https://www.cvut.cz/en) 
+* This project started when [Ondrej Texler](https://ondrejtexler.github.io/) was an intern at [Adobe](https://www.adobe.com/), and it was funded by [Adobe Research](https://research.adobe.com/) and [Czech Technical University in Prague](https://www.cvut.cz/en) 
 * As the underlying patch-based synthesis, this repository uses framework [EBSynth](https://github.com/jamriska/ebsynth) 
 created and maintained by our colleague [Ondrej Jamriska](https://dcgi.fel.cvut.cz/people/jamriond).
 
