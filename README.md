@@ -51,17 +51,19 @@ The result we get is of a low-resolution and does not represent the used style e
 ## Build
 #### On Windows 
 * It depends on OpenCV and it expects `opencv_world420.dll` in your PATH. Pre-build DLL can be downloaded at https://opencv.org/opencv-4-2-0/, (or directly at [opencv-4.2.0-vc14_vc15.exe](https://sourceforge.net/projects/opencvlibrary/files/4.2.0/opencv-4.2.0-vc14_vc15.exe/download))
-* The build script assumes VisualStudio to be installed
-* Run `build-win.bat`, it should output `styletransfer.exe`
+* The build script assumes VisualStudio to be installed (i.e., VisualStudio build tools, `cl.exe`, to be in PATH)
+* Run `build-win.bat` it should output `styletransfer.exe`
+* To build a faster version with GPU support, run `build-win_cuda.bat` (it assumes CUDA to be installed, `nvcc.exe` to be in PATH)
 
 #### On Linux 
 * Download and build OpenCV 4.2.0 (https://opencv.org/opencv-4-2-0/)
 * Copy `libopencv_world.so`, `libopencv_world.so.4.2`, and `libopencv_world.so.4.2.0` to the `opencv-4.2.0/lib`
 * Do not forget to update your `LD_LIBRARY_PATH` to point to the `opencv-4.2.0/lib`
-* Run `build-linux.sh`, it should output `styletransfer`
+* Run `build-linux.sh`, it should output `styletransfer` (it assumes `g++` to be installed)
+* To build a faster version with GPU support, run `build-linux_cuda.sh` (it assumes CUDA to be installed, `nvcc` to be in PATH)
 
 ## Examples
-* Once compiled successfully, check and run `examples/wolf/run.bat` or `examples/wolf/run.sh`
+* Once compiled successfully, explore and run example scripts `examples/wolf/run.bat` or `examples/wolf/run.sh`
 * The result image should appear next to the scripts
 
 ## Parameters
