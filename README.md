@@ -57,8 +57,8 @@ The result we get is of a low-resolution and does not represent the used style e
 
 #### On Linux 
 * Download and build OpenCV 4.2.0 (https://opencv.org/opencv-4-2-0/)
-* Copy `libopencv_world.so`, `libopencv_world.so.4.2`, and `libopencv_world.so.4.2.0` to the `opencv-4.2.0/lib`
-* Do not forget to update your `LD_LIBRARY_PATH` to point to the `opencv-4.2.0/lib`
+* Copy `libopencv_world.so`, `libopencv_world.so.4.2`, and `libopencv_world.so.4.2.0` to the `Neurally-Guided-Style-Transfer/opencv-4.2.0/lib`
+* Do not forget to update your `LD_LIBRARY_PATH` to point to the `Neurally-Guided-Style-Transfer/opencv-4.2.0/lib`
 * Run `build-linux.sh`, it should output `styletransfer` (it assumes `g++` to be installed)
 * To build a faster version with GPU support, run `build-linux_cuda.sh` (it assumes CUDA to be installed, `nvcc` to be in PATH)
 
