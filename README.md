@@ -63,7 +63,7 @@ The result we get is of a low-resolution and does not represent the used style e
 * To build a faster version with GPU support, run `build-linux_cuda.sh` (it assumes CUDA to be installed, `nvcc` to be in PATH)
 
 ## Examples
-* Once compiled successfully, explore and run example scripts `examples/wolf/run.bat` or `examples/wolf/run.sh`
+* Once compiled successfully, explore and run `examples/wolf/run.bat` or `examples/wolf/run.sh`, there are several example scripts and an explanation of some parameters
 * The result image should appear next to the scripts
 
 ## Parameters
