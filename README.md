@@ -48,7 +48,6 @@ The result we get is of a low-resolution and does not represent the used style e
   little cracks of the painting are preserved.
 </p>
 
-
 ## Build
 #### On Windows 
 * It depends on OpenCV and it expects `opencv_world420.dll` in your PATH. Pre-build DLL can be downloaded at https://opencv.org/opencv-4-2-0/, (or directly at [opencv-4.2.0-vc14_vc15.exe](https://sourceforge.net/projects/opencvlibrary/files/4.2.0/opencv-4.2.0-vc14_vc15.exe/download))
@@ -61,6 +60,10 @@ The result we get is of a low-resolution and does not represent the used style e
 * Do not forget to update your `LD_LIBRARY_PATH` to point to the `opencv-4.2.0/lib`
 * Run `build-linux.sh`, it should output `styletransfer`
 
+## Examples
+* Once compiled successfully, check and run `examples/wolf/run.bat` or `examples/wolf/run.sh`
+* The result image should appear next to the scripts
+
 ## Parameters
 * `--style <string>`, mandatory, path to the style image
 * `--neural_result <string>`, mandatory, path to the neural result
@@ -72,10 +75,6 @@ The result we get is of a low-resolution and does not represent the used style e
 * `--patch_based_style_weight <float>`, optional, specify whether to follow style or content during the patch based synthesis
 * `--patch_based_max_mp <float>`, optional, defines the maximal resolution (in megapixels) on which the patch based synthesis runs 
 * `--patch_based_backend <string>`, optional, values are "CPU", "CUDA" or "AUTO"
-
-## Examples
-* Once compiled successfully, check and run `examples/wolf/run.bat` or `examples/wolf/run.sh`
-* The result image should appear next to the scripts
 
 ## <a name="ExistingNeuralStyleTransferImplementations"></a>Existing Neural Style Transfer Implementations
 There exist many great Neural Based Style Transfer papers and its implementations, the following are just a few of them:
