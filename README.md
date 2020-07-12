@@ -23,14 +23,14 @@ and [D. Sýkora](https://dcgi.fel.cvut.cz/home/sykorad/)_ </br>
 <!-- In Proceedings of the 8th ACM/EG Expressive Symposium, pp. 43-50 (Expressive 2019, Genoa, Italy, May 2019) -->
 
 Neural based style transfer methods are capable of delivering amazing stylized imagery; however, the results are usually low-resolution,
-blurred, contrast does not match the original style, and the image lacks many artistically essential details, e.g., brush-strokes, 
+blurred, contrast does not match the original style exemplar, and the image lacks many artistically essential details, e.g., brush-strokes, 
 properties of the used artistic medium, or canvas structure.
 
-This tool is designed to overcome the aforementioned drawbacks of neural based style transfer and allow for creating 
+This tool is designed to overcome the aforementioned drawbacks of neural based style transfer methods and allow for creating 
 high-quality and extremely high-resolution images. The use-case is the following. 
 * Let's assume we have a style exemplar and target photograph in high-resolution.
 * First, we run these two images through our favorite neural-based style transfer method (see some tips in the [section below](#ExistingNeuralStyleTransferImplementations)). 
-The result we get is of a low resolution and does not represent the used style exemplar well.
+The result we get is of a low-resolution and does not represent the used style exemplar well.
 * Second, we use this tool to restore the quality of the neural result and upscale it to the resolution of the style exemplar.
 
 <p align='center'>
