@@ -71,8 +71,8 @@ The result we get is of a low-resolution and does not represent the used style e
 * `--neural_result <string>`, mandatory, path to the neural result
 * `--out_path <string>`, optional, output path, if not specified `--neural_result`+"_enhanced.jpg" is used instead 
 * `--target <string>`, optional, has to be specified if you want to use `--guide_by_target` or `--recolor_by_target`
-* `--guide_by_target <bool>`, optional, might help to restore some content of the target image, but also might make the result worse stylization-wise (target has to be perfectly aligned with neural_result)
-* `--recolor_by_target <bool>`, optional, recolor the final result to have similar colors as the target image
+* `--guide_by_target`, optional, might help to restore some content of the target image, but also might make the result worse stylization-wise (target has to be perfectly aligned with neural_result)
+* `--recolor_by_target`, optional, recolor the final result to have similar colors as the target image
 * `--patch_based_source_blur <int>`, optional, specify how much the result is abstract
 * `--patch_based_style_weight <float>`, optional, specify whether to follow style or content during the patch based synthesis
 * `--patch_based_max_mp <float>`, optional, defines the maximal resolution (in megapixels) on which the patch based synthesis runs 
