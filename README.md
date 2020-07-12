@@ -49,6 +49,9 @@ The result we get is of a low-resolution and does not represent the used style e
 </p>
 
 ## Build
+
+Clone the repo `git clone https://github.com/OndrejTexler/Neurally-Guided-Style-Transfer.git`
+
 #### On Windows 
 * It depends on OpenCV and it expects `opencv_world420.dll` in your PATH. Pre-build DLL can be downloaded at https://opencv.org/opencv-4-2-0/, (or directly at [opencv-4.2.0-vc14_vc15.exe](https://sourceforge.net/projects/opencvlibrary/files/4.2.0/opencv-4.2.0-vc14_vc15.exe/download))
 * The build script assumes VisualStudio to be installed (i.e., VisualStudio build tools, `cl.exe`, to be in PATH)
