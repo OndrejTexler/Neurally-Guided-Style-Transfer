@@ -2,7 +2,7 @@
 
 The official implementation of algorithms described in papers:
 
-**(1) Arbitrary Style Transfer Using Neurally-Guided Patch-Based Synthesis** </br>
+> **(1) Arbitrary Style Transfer Using Neurally-Guided Patch-Based Synthesis** </br>
 _[O. Texler](https://ondrejtexler.github.io/), [D. Futschik](https://dcgi.fel.cvut.cz/people/futscdav),
 [J. Fišer](https://research.adobe.com/person/jakub-fiser/), [M. Lukáč](https://research.adobe.com/person/michal-lukac/), 
 [J. Lu](https://research.adobe.com/person/jingwan-lu/), [E. Shechtman](https://research.adobe.com/person/eli-shechtman/), 
@@ -12,7 +12,7 @@ and [D. Sýkora](https://dcgi.fel.cvut.cz/home/sykorad/)_ </br>
 [[`BiBTeX`](#CitingNeurallyGuided)]
 <!-- In Computers & Graphics (Elsevier, January 2020) -->
 
-**(2) Enhancing Neural Style Transfer using Patch-Based Synthesis** </br>
+> **(2) Enhancing Neural Style Transfer using Patch-Based Synthesis** </br>
 _[O. Texler](https://ondrejtexler.github.io/),
 [J. Fišer](https://research.adobe.com/person/jakub-fiser/), [M. Lukáč](https://research.adobe.com/person/michal-lukac/), 
 [J. Lu](https://research.adobe.com/person/jingwan-lu/), [E. Shechtman](https://research.adobe.com/person/eli-shechtman/), 
